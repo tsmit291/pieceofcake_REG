@@ -1,6 +1,6 @@
 {
   "firebase": "pieceofcake",
-  "public": ".",
+  "public": "./",
   "ignore": [
     "firebase.json",
     "**/.*",
