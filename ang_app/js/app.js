@@ -5,5 +5,17 @@ app.config(function($routeProvider){
   .when('/#/', {
     templateUrl: './index.html',
     controller: 'mainController'
+  }),
+  .when('/#/about', {
+    templateUrl: './partials/about.html',
+    controller: 'aboutController'
+  }),
+  .when('/#/contact', {
+    templateUrl: './partials/contact.html',
+    controller: 'contactController'
+  }),
+  .when('/#/registries', {
+    templateUrl: './partials/registries.html',
+    controller: 'registriesController'
   })
 });
