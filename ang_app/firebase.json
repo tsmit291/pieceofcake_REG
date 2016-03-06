@@ -1,5 +1,11 @@
 {
   "firebase": "pieceofcake",
+  "rewrites": [
+  {
+    "source": "**/**/**",
+    "destination": "/index.html"
+  }
+  ],
   "public": "./",
   "ignore": [
     "firebase.json",
