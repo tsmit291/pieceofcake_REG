@@ -2,19 +2,19 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider){
   $routeProvider
-  .when('/#/', {
+  .when('/', {
     templateUrl: './index.html',
     controller: 'mainController'
   }),
-  .when('/#/about', {
+  .when('/about', {
     templateUrl: './partials/about.html',
     controller: 'aboutController'
   }),
-  .when('/#/contact', {
+  .when('/contact', {
     templateUrl: './partials/contact.html',
     controller: 'contactController'
   }),
-  .when('/#/registries', {
+  .when('/registries', {
     templateUrl: './partials/registries.html',
     controller: 'registriesController'
   })
