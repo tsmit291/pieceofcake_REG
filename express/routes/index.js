@@ -32,25 +32,25 @@ router.get('/', function(req, res, next) {
 
 
 /*GET registry home page for kitchen items.*/
-router.get('/kitchen', function(req, res, next){
-  kitchen().select().then(function (results){
-    res.json(results);
-  });
-});
+// router.get('/kitchen', function(req, res, next){
+//   kitchen().select().then(function (results){
+//     res.json(results);
+//   });
+// });
 
 /*GET registry home page for living items. */
-router.get('/living', function(req, res, next){
-  living().select().then(function (results){
-    res.json(results);
-  });
-});
+// router.get('/living', function(req, res, next){
+//   living().select().then(function (results){
+//     res.json(results);
+//   });
+// });
 
 /*GET registry home page for outdoor items.*/
-router.get('/outdoor', function(req, res, next){
-  outdoor().select().then(function (results){
-    res.json(results);
-  });
-});
+// router.get('/outdoor', function(req, res, next){
+//   outdoor().select().then(function (results){
+//     res.json(results);
+//   });
+// });
 
 
 
