@@ -21,12 +21,12 @@ function registry(){
 
 /* GET registry home page with ALL registry items. */
 router.get('/', function(req, res, next) {
-  kitchen().select().then(function (kResults){
-    living().select().then(function (lResults){
-      outdoor().select().then(function (oResults){
+  kitchen().select().then(function (results){
+    living().select().then(function (results){
+      outdoor().select().then(function (results){
       });
     });
-    res.json(kResults, lResults, oResults)
+    res.json(results)
   });
 });
 
