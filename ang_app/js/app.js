@@ -18,6 +18,9 @@ app.config(function($routeProvider){
     templateUrl: './partials/registries.html',
     controller: 'mainController'
   })
+  .when('/registries/new', {
+    templateUrl: './partials/new.html'
+  })
 });
 
 // remember no hashes on your routes.
