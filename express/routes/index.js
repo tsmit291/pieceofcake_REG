@@ -19,12 +19,39 @@ function registry(){
 }
 
 
-/* GET home page. */
+/* GET registry home page with ALL registry items. */
 router.get('/', function(req, res, next) {
+  kitchen().select().then(function (kResults){
+    living().select().then(function (lResults){
+      outdoor().select().then(function (oResults){
+      });
+    });
+    res.json(kResults, lResults, oResults)
+  });
+});
+
+
+/*GET registry home page for kitchen items.*/
+router.get('/kitchen', function(req, res, next){
   kitchen().select().then(function (results){
     res.json(results);
   });
-
 });
+
+/*GET registry home page for living items. */
+router.get('/living', function(req, res, next){
+  living().select().then(function (results){
+    res.json(results);
+  });
+});
+
+/*GET registry home page for outdoor items.*/
+router.get('/outdoor', function(req, res, next){
+  outdoor().select().then(function (results){
+    res.json(results);
+  });
+});
+
+
 
 module.exports = router;
