@@ -2,16 +2,8 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex.js');
 
-function kitchen(){
-  return knex('kitchen')
-};
-
-function living(){
-  return knex('living')
-};
-
-function outdoor(){
-  return knex('outdoor')
+function registryObjs(){
+  return knex('registryObjs')
 };
 
 function registry(){
@@ -21,31 +13,19 @@ function registry(){
 
 /* GET registry home page with ALL registry items. */
 router.get('/registries', function(req, res, next) {
-  kitchen().select().then(function (results){
+  registryObjs().select().then(function (results){
     res.json(results)
     });
   });
 
-/*GET registry home page for kitchen items.*/
-router.get('/kitchen', function(req, res, next){
-  kitchen().select().then(function (results){
-    res.json(results);
-  });
+/* Add new registry item */
+router.post('/registries', function(req, res, next){
+  registryObjs().insert(req.body).then(function (results){
+    res.sendStatus(200);
+  }).catch(function(err){
+    res.status(500).json(err)
+  })
 });
-
-/*GET registry home page for living items. */
-router.get('/living', function(req, res, next){
-  living().select().then(function (results){
-    res.json(results);
-  });
-});
-
-/*GET registry home page for outdoor items.*/
-// router.get('/outdoor', function(req, res, next){
-//   outdoor().select().then(function (results){
-//     res.json(results);
-//   });
-// });
 
 
 

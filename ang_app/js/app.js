@@ -2,11 +2,11 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider){
   $routeProvider
-  // .when('/#/', {
+  // .when('/', {
   //   templateUrl: './partials/home.html',
   //   controller: 'mainController'
   // })
-  // .when('/#/about', {
+  // .when('/about', {
   //   templateUrl: './partials/about.html',
   //   controller: 'aboutController'
   // })

@@ -2,16 +2,28 @@
    <div class="container">
       <div class="row">
           <div class="col-md-6">
-            <div ng-repeat="item in registryCollection">
-              <h3>{{item.item}}</h3>
-              <h5>Category: {{item.category}}</h5>
-              <h5>Quantity: {{item.quantity}}</h5>
-              <h5><i>Price: {{item.price}}</i></h5>
+            <div ng-repeat="item in kitchen">
+                <h3>{{item.item}}</h3>
+                <h5>Category: {{item.category}}</h5>
+                <h5>Quantity: {{item.quantity}}</h5>
+                <h5><i>Price: {{item.price}}</i></h5>
             </div>
           </div>
           <div class="col-md-6">
-              Body content 2
+            <div ng-repeat="item in living">
+                <h3>{{item.item}}</h3>
+                <h5>Category: {{item.category}}</h5>
+                <h5>Quantity: {{item.quantity}}</h5>
+                <h5><i>Price: {{item.price}}</i></h5>
+            </div>
           </div>
       </div>
   </div>
 </div>
+
+
+//<!-- TODO:
+  a. ng-repeat for item in registryCollection
+  b. ng-if the category is equal to living, print in X div
+  c. ng-if the category is equal to kitchen, print in X decorative
+  d. ng-if the category is equal to outdoor,  -->
