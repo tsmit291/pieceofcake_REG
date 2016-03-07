@@ -1,10 +1,17 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            Body content 1
-        </div>
-        <div class="col-md-6">
-            Body content 2
-        </div>
-    </div>
+<div ng-controller="mainController">
+   <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+            <div ng-repeat="item in registryCollection">
+              <h3>{{item.item}}</h3>
+              <h5>Category: {{item.category}}</h5>
+              <h5>Quantity: {{item.quantity}}</h5>
+              <h5><i>Price: {{item.price}}</i></h5>
+            </div>
+          </div>
+          <div class="col-md-6">
+              Body content 2
+          </div>
+      </div>
+  </div>
 </div>
