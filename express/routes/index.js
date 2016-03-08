@@ -27,6 +27,8 @@ router.post('/registries', function(req, res, next){
   })
 });
 
+/*Edit a registry item */
+
 
 
 module.exports = router;

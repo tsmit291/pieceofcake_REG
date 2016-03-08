@@ -1,36 +1,29 @@
-<form ng-submit="newItem()" ng-controller="registriesController">
+<form ng-submit="newItem()">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
-        <span class="input-group-addon" id="sizing-addon2">Item Name</span>
-        <input type="text" class="form-control" placeholder="Insert Registry Item Name" aria-describedby="sizing-addon2">
+        <label for = "item" class = "col-sm-6 control-label">Registry Item</label>
+        <input type="text" class="form-control" placeholder="Registry Item Name" aria-describedby="sizing-addon2">
       </div>
-      <br>
-      <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Category<span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Kitchen</a></li>
-          <li><a href="#">Living</a></li>
-          <li><a href="#">Outdoor</a></li>
-        </ul>
+      <div class = "checkbox">
+        <label for = "category" class = "col-sm-2 control-label">Category</label>
+        <label><input type = "checkbox">Kitchen</label>
+        <label><input type = "checkbox">Living</label>
+        <label><input type = "checkbox">Outdoor</label>
       </div>
-      <br><br>
+      <div class = "checkbox">
+        <label for = "price" class = "col-sm-2 control-label">Price</label>
+        <label><input type = "checkbox">$</label>
+        <label><input type = "checkbox">$$</label>
+        <label><input type = "checkbox">$$$</label>
+        <label><input type = "checkbox">$$$$</label>
+      </div>
       <div class="input-group">
-        <span class="input-group-addon" id="sizing-addon2">Quantity</span>
+        <label for = "quantity" class = "col-sm-2 control-label">Quantity</label>
         <input type="text" class="form-control" placeholder="Insert Quantity" aria-describedby="sizing-addon2">
-      </div>
-      <br>
-      <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Price<span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">$</a></li>
-          <li><a href="#">$$</a></li>
-          <li><a href="#">$$$</a></li>
-          <li><a href="#">$$$$</a></li>
-        </ul>
       </div>
     </div>
   </div>
   <br>
-  <button type="button" class="btn btn-primary" value="submit">Submit</button>
+  <input type="submit" value="Add Item">
 </form>
