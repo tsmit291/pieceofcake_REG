@@ -12,3 +12,4 @@ app.controller('registriesController', ['$scope', 'registryService', '$http', fu
   $http.post("http://localhost:3000/registries", registryItem);
   }
 }])
+    
