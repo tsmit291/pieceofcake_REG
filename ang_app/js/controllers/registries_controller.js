@@ -1,4 +1,4 @@
-app.controller('registriesController', ['$scope', 'registryService', function($scope, registryService){
+app.controller('registriesController', ['$scope', 'registryService', '$http', function($scope, registryService, $http){
 
   $scope.newItem = function() {
     console.log('adding an item to our list');
@@ -7,7 +7,8 @@ app.controller('registriesController', ['$scope', 'registryService', function($s
     registryItem.category = $scope.category;
     registryItem.price = $scope.price;
     registryItem.quantity = $scope.quantity;
+    console.log($http);
 
-  $http.post("http://localhost:3000/registries", {method: "jsonp"});
+  $http.post("http://localhost:3000/registries", registryItem);
   }
 }])
